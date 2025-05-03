@@ -55,6 +55,7 @@ class MusicManager:
 
         artist = random.choice(list(try_artists))
         print(f"\nArtist to try: {artist}")
+        print(f"YouTube search: https://www.youtube.com/results?search_query={artist.replace(' ', '+')}")
         
         while True:
             response = input("Have you checked this artist? (y/n): ").lower()
