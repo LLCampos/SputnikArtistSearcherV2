@@ -36,9 +36,7 @@ def scrape_artists_from_url(url: str) -> Set[str]:
     
     artists = set()
     
-    for i, box in enumerate(profile_boxes, 1):
-        print(f"\nProcessing profile box {i}:")
-        
+    for i, box in enumerate(profile_boxes, 1):        
         # Find all text elements in the box
         text_elements = box.find_all(text=True)
         
