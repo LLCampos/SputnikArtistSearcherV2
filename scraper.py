@@ -67,7 +67,13 @@ def scrape_artists_from_url(url: str) -> Set[str]:
                             # Look for all artist links in this row
                             artist_links = current_row.find_all('a')
                             for artist_link in artist_links:
-                                artist_name = artist_link.get_text(strip=True)
+                                artist_name = artist_link.find('font', class_='mediumbright')
+                                if artist_name:
+                                    # Get just the text before the nested font tag
+                                    artist_name = artist_name.contents[0].strip()
+                                else:
+                                    # Fallback to regular text extraction if structure is different
+                                    artist_name = artist_link.get_text(strip=True)
                                 # Remove any " - " and everything after it (album name)
                                 artist_name = artist_name.split(' - ')[0]
                                 artists.add(artist_name)
