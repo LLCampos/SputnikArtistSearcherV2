@@ -15,15 +15,15 @@ class MusicManager:
             if not os.path.exists(file):
                 open(file, 'w').close()
 
-    def _read_artists(self, filename: str) -> Set[str]:
-        """Read artists from a file and return as a set."""
+    def _read_artists(self, filename: str) -> List[str]:
+        """Read artists from a file and return as a list, preserving order."""
         with open(filename, 'r') as f:
-            return {line.strip() for line in f if line.strip()}
+            return [line.strip() for line in f if line.strip()]
 
-    def _write_artists(self, filename: str, artists: Set[str]):
+    def _write_artists(self, filename: str, artists: List[str]):
         """Write artists to a file."""
         with open(filename, 'w') as f:
-            for artist in sorted(artists):
+            for artist in artists:
                 f.write(f"{artist}\n")
 
     def add_source(self, url: str):
@@ -34,10 +34,12 @@ class MusicManager:
             
             # Get existing artists
             try_artists = self._read_artists(self.try_file)
-            ignore_artists = self._read_artists(self.ignore_file)
+            ignore_artists = set(self._read_artists(self.ignore_file))
             
-            # Add new artists, excluding those in ignore list
-            try_artists.update(new_artists - ignore_artists)
+            # Add new artists, excluding those in ignore list, while preserving order
+            for artist in new_artists:
+                if artist not in ignore_artists and artist not in try_artists:
+                    try_artists.append(artist)
             
             # Save updated list
             self._write_artists(self.try_file, try_artists)
@@ -53,7 +55,7 @@ class MusicManager:
             print("No artists left to try!")
             return
 
-        artist = random.choice(list(try_artists))
+        artist = random.choice(try_artists)
         print(f"\nArtist to try: {artist}")
         print(f"YouTube search: https://www.youtube.com/results?search_query={artist.replace(' ', '+')}")
         
@@ -66,7 +68,7 @@ class MusicManager:
         if response == 'y':
             try_artists.remove(artist)
             ignore_artists = self._read_artists(self.ignore_file)
-            ignore_artists.add(artist)
+            ignore_artists.append(artist)
             
             self._write_artists(self.try_file, try_artists)
             self._write_artists(self.ignore_file, ignore_artists)
