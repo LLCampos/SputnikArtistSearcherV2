@@ -289,7 +289,6 @@ Mudvayne
 Muse
 Musk Ox
 My Epic
-N.W.A.
 NONE
 Nailbomb
 Nas
@@ -412,7 +411,6 @@ The Chemical Brothers
 The Clash
 The Contortionist
 The Cure
-The Dillinger Escape Plan
 The Dust Brothers
 The Fall
 The Flaming Lips
@@ -605,7 +603,6 @@ Haru Nemuri
 Grace Jones
 Paysage d'Hiver
 Volcanic Queen
-D'Angelo
 The Sound Stylistics
 The Gun Club
 Lonney(s) / Volcanic Queen
@@ -779,7 +776,6 @@ Electrelane
 Misthyrming
 Arnaut Pavle
 Transcending Bizarre?
-NAILS
 Inculter
 Wardruna
 Lowercase Noises
@@ -856,7 +852,6 @@ Emancipator
 Weakling
 Skullcrusher
 Torture Hammer
-No/Mas
 Filth Chasm
 Ignite
 Joe Pesci
@@ -879,7 +874,6 @@ Fauna
 Suldusk
 Obliteration
 Maximum the Hormone
-A Winged Victory for the Sullen
 Susanne Sundfor
 Antlers (DE)
 False
@@ -1136,7 +1130,6 @@ The Austerity Program
 Albert Ayler
 Pere Ubu
 AMM
-Tim Hardin
 Dirty Beaches
 Fink
 Kangding Ray
@@ -1397,7 +1390,6 @@ Marvin Gaye
 Aine O'Dwyer
 Gonjasufi
 The Soft Moon
-Jerusalem in my Heart
 Actress
 Seekae
 Biz Markie
@@ -1773,7 +1765,6 @@ Secede
 Dilute
 Christian Fitness
 Bibio
-Cold War Kids
 Julius Eastman
 The Church
 Monster Machismo
@@ -1835,7 +1826,6 @@ Masayoshi Fujita
 The The
 Snowmine
 The December Sound
-Cromagnon
 Ishome
 The Brian Jonestown Massacre
 Lakker
@@ -2050,7 +2040,6 @@ His Hero Is Gone
 Story of the Year
 Eldstad
 Verme
-Uncle Tupelo
 Girl Scouts
 Labradford
 Soul Coughing
@@ -2341,7 +2330,6 @@ Sweep the Leg Johnny
 Florrie
 Tokyo Jihen
 Cherry Bullet
-Fun Lovin' Criminals
 Gas
 Lauren Bousfield
 Shinsei Kamattechan
@@ -2439,7 +2427,6 @@ Blu and Exile
 Candy Claws
 I Monster
 Eldritch Anisette
-Dry The River
 Salvia Palth
 Cleric
 Number Girl
@@ -2985,7 +2972,6 @@ Haggard
 DJ Mehdi
 Friendzone
 Pianos Become the Teeth
-Alice Deejay
 Death Goals/Dreamwell
 Orchestral Manoeuvres In The Dark
 The Now (USA-PA)
@@ -3011,7 +2997,6 @@ Thantifaxath
 Death in June
 The Armed
 Monomate
-Ozean
 Haz Lo Correcto
 Beat Connection
 Lee Jin-ah
@@ -3121,7 +3106,6 @@ Eleventh He Reaches London
 Mahkato
 The Human League
 Basement Jaxx
-Dillinja
 Gunship
 No Cure
 Submotion Orchestra
@@ -3415,7 +3399,6 @@ Mauro Picotto
 King Gizzard and The Lizard Wizard
 Ramper
 Bakermat
-KMD
 Jail Socks
 The Glitch Mob
 Moodymann
@@ -4200,7 +4183,6 @@ Belinda Carlisle
 Showtek
 Ferry Corsten
 Snow Strippers
-Otis Redding
 Bobina
 Allah-Las
 Ensemble Pearl
@@ -4211,7 +4193,6 @@ Sonic Coaster Pop
 Jenn Champion
 Bloodbather
 LITE
-underscores
 Rhadoo
 NOISIA
 Yoshiko Sai
@@ -4339,4 +4320,3 @@ unable to fully embrace this happiness
 Signal (SWE)
 Ildjarn
 Hudson Mohawke
-Colin Stetson
