@@ -3,6 +3,8 @@ import random
 from typing import List, Set
 from scraper import scrape_artists_from_url
 
+EXPLORE_FILE = os.path.expanduser("~/Dropbox (Personal)/notes/music/next-music-to-explore.md")
+
 class MusicManager:
     def __init__(self):
         self.try_file = "music-to-try.txt"
@@ -60,19 +62,29 @@ class MusicManager:
         print(f"YouTube search: https://www.youtube.com/results?search_query={artist.replace(' ', '+')}")
         
         while True:
-            response = input("Have you checked this artist? (y/n): ").lower()
-            if response in ['y', 'n']:
+            response = input("Have you checked this artist? (y/n/e to add to explore): ").lower()
+            if response in ['y', 'n', 'e']:
                 break
-            print("Please answer 'y' or 'n'")
+            print("Please answer 'y', 'n', or 'e'")
 
-        if response == 'y':
+        if response in ['y', 'e']:
             try_artists.remove(artist)
             ignore_artists = self._read_artists(self.ignore_file)
             ignore_artists.append(artist)
-            
+
             self._write_artists(self.try_file, try_artists)
             self._write_artists(self.ignore_file, ignore_artists)
             print(f"Added {artist} to ignore list")
+
+        if response == 'e':
+            with open(EXPLORE_FILE, 'r+') as f:
+                f.seek(0, 2)
+                if f.tell() > 0:
+                    f.seek(f.tell() - 1)
+                    if f.read(1) != '\n':
+                        f.write('\n')
+                f.write(f"- {artist}\n")
+            print(f"Added '{artist}' to next-music-to-explore.")
 
 def main():
     manager = MusicManager()
@@ -82,9 +94,9 @@ def main():
         print("1. Add source")
         print("2. Try music")
         print("3. Exit")
-        
+
         choice = input("\nEnter your choice (1-3): ")
-        
+
         if choice == "1":
             url = input("Enter Sputnik Music URL: ")
             manager.add_source(url)
